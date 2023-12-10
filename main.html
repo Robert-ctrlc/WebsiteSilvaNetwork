@@ -61,11 +61,18 @@
 
         section {
             padding: 20px;
-            color: #333; 
+            color: rgb(255, 248, 248); 
         }
 
         footer {
             display: none;
+        }
+
+        .rule-box{
+            background-color: white;
+            padding: 20px;
+            margin-bottom: 20px;
+            border-radius: 10px;
         }
     </style>
 </head>
@@ -81,7 +88,7 @@
     </header>
 
     <section id="content">
-        
+       
     </section>
 
     <script>
@@ -90,7 +97,25 @@
 
             switch (contentType) {
                 case 'rules':
-                    content.innerHTML = '<h2>Rules</h2><p></p>';
+                ontent.innerHTML = `
+                        <div class="rule-box">
+                            <h2>1.1 - Stay in character at ALL times</h2>
+                            <p>Roleplay first, report later. In the event that there is an issue, roleplay out the scenario and report it later via the ticket system. Do NOT ever break character to inform someone they are breaking rules. If you are reported breaking character disciplinary action will be taken against you.</p>
+                        </div>
+
+                        <div class="rule-box">
+                            <h2>1.2 - Combat Logging</h2>
+                            <p>Combat logging is logging out or disconnecting during an RP scene to avoid dying and potential repercussions from dying, such as losing valuable items. Or leaving and spawning at a different location to avoid consequences to a scene.</p>
+                        </div>
+
+                        <div class="rule-box">
+                            <h2>1.3 - Doxxing</h2>
+                            <p>Any sort of doxxing in the server will lead to an instant permaban with no appeal. Doxxing is using private/personal information about someone else and sharing it to others, this could be things such as personal pictures, addresses etc.</p>
+                        </div>
+
+                        
+                    `;
+                        
                     break;
                 default:
                     content.innerHTML = '<h2>Welcome!</h2><p></p>';
